@@ -4,9 +4,9 @@ MAINTAINER "enumus"
 # Install git
 RUN apt-get update \
     & apt-get install -y git
-#RUN git clone https://github.com/enumus/py-mikrotik-reporter.git /app
 
-COPY ./py-mikrotik-reporter /app
+# Clone the repository
+RUN git clone https://github.com/enumus/py-mikrotik-reporter.git /app
 
 # Set working directory
 WORKDIR /app
