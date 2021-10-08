@@ -3,7 +3,8 @@ MAINTAINER "enumus"
 
 # Install git
 RUN apt-get update \
-    & apt-get install -y git
+    & apt-get install -y git \
+    & pip install --upgrade pip
 
 # Clone the repository
 RUN git clone https://github.com/enumus/py-mikrotik-reporter.git /app
