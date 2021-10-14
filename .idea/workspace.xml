@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b91258-cca1-4b50-bfa6-4896adea3333" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apache.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.wsgi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +70,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634205218109</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change the build to use apache">
+      <created>1634221647901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634221647901</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Set the git clone to the repository" />
     <MESSAGE value="Change when pip upgrade was called" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change when pip upgrade was called" />
+    <MESSAGE value="change the build to use apache" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the build to use apache" />
   </component>
 </project>

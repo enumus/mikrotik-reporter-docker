@@ -15,9 +15,6 @@ RUN apt-get update && apt-get install -y \
  && apt-get autoremove \
  && rm -rf /var/lib/apt/lists/*
 
-# Clone the repository
-RUN git clone https://github.com/enumus/py-mikrotik-reporter.git /app
-
 # Configuring apache
 COPY ./apache.tpl /etc/apache2/sites-available/main.conf
 RUN a2dissite 000-default.conf \
@@ -25,13 +22,15 @@ RUN a2dissite 000-default.conf \
     & a2enmod headers
 
 RUN pip3 install --upgrade pip
-RUN pip3 install -r /app/requirements.txt
-
-RUN mv /app/config.tpl /app/config.ini
 
 # LINK apache config to docker logs.
 RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
     ln -sf /proc/self/fd/1 /var/log/apache2/error.log
+
+# Clone the repository
+RUN git clone https://github.com/enumus/py-mikrotik-reporter.git /app
+RUN pip3 install -r /app/requirements.txt
+RUN mv /app/config.tpl /app/config.ini
 
 # Set working directory
 WORKDIR /app
