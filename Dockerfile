@@ -2,13 +2,16 @@ FROM debian:latest
 MAINTAINER "enumus"
 
 # Install requirements
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && apt-get install -y \
     apache2 \
     libapache2-mod-wsgi-py3 \
     build-essential \
     python3 \
     python3-dev\
     python3-pip \
+    libffi-dev \
+    python3-cryptography \
     vim \
     git \
  && apt-get clean \
